@@ -2,24 +2,12 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [firstName, setFirstName] = useState("");
-  const [middleName, setMiddleName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const fullName = [firstName, middleName, lastName].filter(Boolean).join(" ");
-  const message = `Hello ${fullName}, welcome to my app!`;
-
-  <form>
-    <input type="text" id="firstName">
-      First Name
-    </input>
-    <input type="text" id="middleName">
-      Middle Name
-    </input>
-    <input type="text" id="lastName">
-      Last Name
-    </input>
-  </form>;
-
+  const [firstName, setFirstName] = useState(""); //set up useState for first name
+  const [middleName, setMiddleName] = useState("");//set up useState for middle name
+  const [lastName, setLastName] = useState("");//set up useState for last name
+  const fullName = [firstName, middleName, lastName].filter(Boolean).join(" "); //join the names together with a space between them
+  const message = `Hello ${fullName}, welcome to my app!`; //message response
+  //build the form with onchange event handlers
   return (
     <>
       <form>
